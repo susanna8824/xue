@@ -310,6 +310,71 @@ body {
     }
 }
 
+/* ===== 发表论文 ===== */
+.publications-list {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.publication-item {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    transition: all var(--transition-normal);
+}
+
+.publication-item:hover {
+    padding-left: 1rem;
+    background: linear-gradient(90deg, var(--bg-secondary) 0%, transparent 100%);
+}
+
+.publication-item:last-child {
+    border-bottom: none;
+}
+
+.pub-year {
+    flex-shrink: 0;
+    width: 60px;
+    height: 28px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pub-content {
+    flex: 1;
+}
+
+.pub-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.pub-venue {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.pub-venue::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
 /* ===== 区域通用样式 ===== */
 .section {
     padding: 100px 0;
