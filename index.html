@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>万雪 - 中国科学院空间应用工程与技术中心</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">万雪</a>
+            <button class="nav-toggle" id="navToggle" aria-label="菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#research" class="nav-link">研究领域</a></li>
+                <li><a href="#education" class="nav-link">教育背景</a></li>
+                <li><a href="#experience" class="nav-link">工作经历</a></li>
+                <li><a href="#recruitment" class="nav-link">招生信息</a></li>
+                <li><a href="#students" class="nav-link">指导学生</a></li>
+                <li><a href="#contact" class="nav-link">联系方式</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 主页区域 -->
+    <header class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="greeting">你好，我是</span>
+                    <span class="name">万雪</span>
+                </h1>
+                <p class="hero-subtitle">博士 / 博士生导师</p>
+                <p class="hero-affiliation">中国科学院空间应用工程与技术中心</p>
+                <div class="hero-tags">
+                    <span class="tag">空间智能视觉</span>
+                    <span class="tag">三维重建</span>
+                    <span class="tag">SLAM</span>
+                    <span class="tag">计算机视觉</span>
+                </div>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn btn-primary">联系我</a>
+                    <a href="#research" class="btn btn-secondary">了解研究</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 研究领域 -->
+    <section class="section" id="research">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-en">Research</span>
+                <span class="title-cn">研究领域</span>
+            </h2>
+            <div class="research-grid">
+                <!-- 研究方向一 -->
+                <div class="research-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                            <path d="M2 12h20"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">行星场景感知与视觉导航定位</h3>
+                    <ul class="card-list">
+                        <li>
+                            <strong>地面移动平台多传感器融合导航系统</strong>
+                            <p>支持双目视觉、视觉+惯导、激光导航三种模式切换，实现建图、导航、避障功能</p>
+                        </li>
+                        <li>
+                            <strong>火星无人机视觉导航定位算法</strong>
+                            <p>基于地形匹配，精度比基线方法提升65.6%</p>
+                        </li>
+                        <li>
+                            <strong>月球坑三维重建</strong>
+                            <p>基于深度学习，低纹理、遮挡区域精度优于传统方法</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 研究方向二 -->
+                <div class="research-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="5" r="3"/>
+                            <path d="M12 22V8"/>
+                            <path d="M5 12H2a10 10 0 0 0 20 0h-3"/>
+                            <circle cx="12" cy="12" r="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">空间目标感知与追踪</h3>
+                    <ul class="card-list">
+                        <li>
+                            <strong>STAS框架</strong>
+                            <p>深度卷积特征用于目标跟踪与分割，解决翻滚、遮挡等问题</p>
+                        </li>
+                        <li>
+                            <strong>空间目标三维部件分割</strong>
+                            <p>构建专用数据集，识别准确率>90%，识别速度<0.5秒</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 研究方向三 -->
+                <div class="research-card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M3 9h18"/>
+                            <path d="M9 21V9"/>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">空间对地观测场景感知</h3>
+                    <ul class="card-list">
+                        <li>
+                            <strong>灾害场景受损建筑快速提取</strong>
+                            <p>基于GRAD-CAM弱监督定位模型，支持灾害快速评估决策</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 教育背景 -->
+    <section class="section section-alt" id="education">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-en">Education</span>
+                <span class="title-cn">教育背景</span>
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2012.10 - 2015.12</span>
+                        <h3 class="timeline-title">理学博士</h3>
+                        <p class="timeline-place">伦敦帝国理工学院</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2010.10 - 2012.06</span>
+                        <h3 class="timeline-title">工学硕士</h3>
+                        <p class="timeline-place">武汉大学遥感信息工程学院</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2006.10 - 2010.06</span>
+                        <h3 class="timeline-title">工学学士</h3>
+                        <p class="timeline-place">武汉大学遥感信息工程学院</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工作经历 -->
+    <section class="section" id="experience">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-en">Experience</span>
+                <span class="title-cn">工作经历</span>
+            </h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <div class="experience-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2"/>
+                                <path d="M16 7V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v3"/>
+                            </svg>
+                        </div>
+                        <div class="experience-meta">
+                            <h3>助理研究员</h3>
+                            <p>伦敦帝国理工学院</p>
+                        </div>
+                    </div>
+                    <p class="experience-period">2015.12 - 2017.11</p>
+                </div>
+                <div class="experience-card highlight">
+                    <div class="experience-header">
+                        <div class="experience-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                                <path d="M2 17l10 5 10-5"/>
+                                <path d="M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <div class="experience-meta">
+                            <h3>博士生导师</h3>
+                            <p>中国科学院空间应用工程与技术中心</p>
+                        </div>
+                    </div>
+                    <p class="experience-period">至今</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 招生信息 -->
+    <section class="section section-alt" id="recruitment">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-en">Recruitment</span>
+                <span class="title-cn">招生信息</span>
+            </h2>
+            <div class="recruitment-card">
+                <div class="recruitment-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">1-2</span>
+                        <span class="stat-label">每年招收硕士</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">081203</span>
+                        <span class="stat-label">招生专业代码</span>
+                    </div>
+                </div>
+                <div class="recruitment-details">
+                    <h3>招生专业</h3>
+                    <p>计算机应用技术</p>
+                    <h3>研究方向</h3>
+                    <div class="research-tags">
+                        <span>空间智能视觉</span>
+                        <span>三维重建</span>
+                        <span>SLAM</span>
+                        <span>计算机视觉</span>
+                        <span>信号处理</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 指导学生 -->
+    <section class="section" id="students">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-en">Students</span>
+                <span class="title-cn">指导学生</span>
+            </h2>
+            <div class="students-grid">
+                <div class="student-group">
+                    <h3 class="group-title">
+                        <span class="status-dot completed"></span>
+                        已毕业学生
+                    </h3>
+                    <ul class="student-list">
+                        <li>
+                            <span class="student-name">李沛卓</span>
+                            <span class="student-degree">计算机技术硕士</span>
+                        </li>
+                        <li>
+                            <span class="student-name">孙运达</span>
+                            <span class="student-degree">计算机应用技术硕士</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="student-group">
+                    <h3 class="group-title">
+                        <span class="status-dot current"></span>
+                        在读学生
+                    </h3>
+                    <ul class="student-list">
+                        <li>
+                            <span class="student-name">邵亚东</span>
+                            <span class="student-degree">博士研究生</span>
+                        </li>
+                        <li>
+                            <span class="student-name">林泽楠</span>
+                            <span class="student-degree">硕士</span>
+                        </li>
+                        <li>
+                            <span class="student-name">赵广源</span>
+                            <span class="student-degree">硕士</span>
+                        </li>
+                        <li>
+                            <span class="student-name">武奥迪</span>
+                            <span class="student-degree">硕士</span>
+                        </li>
+                        <li>
+                            <span class="student-name">邵远斌</span>
+                            <span class="student-degree">硕士</span>
+                        </li>
+                        <li>
+                            <span class="student-name">田瑶琳</span>
+                            <span class="student-degree">硕士</span>
+                        </li>
+                        <li>
+                            <span class="student-name">刘佳宜</span>
+                            <span class="student-degree">信号与信息处理硕士</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-en">Contact</span>
+                <span class="title-cn">联系方式</span>
+            </h2>
+            <div class="contact-card">
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <path d="M22 6l-10 7L2 6"/>
+                        </svg>
+                    </div>
+                    <div class="contact-info">
+                        <span class="contact-label">电子邮箱</span>
+                        <a href="mailto:wanxue@csu.ac.cn" class="contact-value">wanxue@csu.ac.cn</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <div class="contact-info">
+                        <span class="contact-label">通讯地址</span>
+                        <p class="contact-value">北京市海淀区邓庄南路9号</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 万雪. 中国科学院空间应用工程与技术中心</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
