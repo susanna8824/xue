@@ -256,60 +256,58 @@ body {
     transform: translateY(-2px);
 }
 
-/* 浮动装饰元素 */
+/* 头像区域 */
 .hero-visual {
     position: relative;
     height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.floating-shapes {
-    position: absolute;
+.avatar-container {
+    position: relative;
+    width: 320px;
+    height: 320px;
+}
+
+.avatar {
     width: 100%;
     height: 100%;
-}
-
-.shape {
-    position: absolute;
+    object-fit: cover;
     border-radius: 50%;
-    animation: float 6s ease-in-out infinite;
+    box-shadow: 0 20px 60px rgba(37, 99, 235, 0.2);
+    border: 6px solid white;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.shape-1 {
-    width: 300px;
-    height: 300px;
-    background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent-color) 100%);
-    opacity: 0.1;
-    top: 10%;
-    right: 10%;
-    animation-delay: 0s;
+.avatar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 30px 80px rgba(37, 99, 235, 0.3);
 }
 
-.shape-2 {
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(135deg, var(--accent-color) 0%, var(--primary-color) 100%);
-    opacity: 0.15;
-    top: 50%;
-    right: 30%;
-    animation-delay: 2s;
+.avatar-container::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    z-index: -1;
+    opacity: 0.3;
+    animation: pulse-ring 3s ease-in-out infinite;
 }
 
-.shape-3 {
-    width: 150px;
-    height: 150px;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-    opacity: 0.1;
-    top: 20%;
-    right: 40%;
-    animation-delay: 4s;
-}
-
-@keyframes float {
+@keyframes pulse-ring {
     0%, 100% {
-        transform: translateY(0) rotate(0deg);
+        transform: scale(1);
+        opacity: 0.3;
     }
     50% {
-        transform: translateY(-20px) rotate(5deg);
+        transform: scale(1.05);
+        opacity: 0.2;
     }
 }
 
